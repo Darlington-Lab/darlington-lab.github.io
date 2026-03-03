@@ -1,231 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Darlington Lab</title>
   <style>
+    :root {
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #555;
+      --line: #e5e5e5;
+      --navbg: #f5f5f5;
+      --navline: #ddd;
+      --link: #0073e6;
+    }
 
-:root{
-  --bg:#f5f5f5;
-  --card:#ffffff;
-  --text:#222;
-  --muted:#555;
-  --line:#e5e5e5;
-  --navbg:#f5f5f5;
-  --navline:#ddd;
-  --link:#0073e6;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-*{box-sizing:border-box;}
-body{
-  font-family: Arial, sans-serif;
-  margin:0;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.5;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
 
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 20px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-nav{
-  background:var(--navbg);
-  border-bottom:1px solid var(--navline);
-}
-nav .container{
-  display:flex;
-  gap:18px;
-  align-items:center;
-  padding:14px 20px;
-}
-nav a{
-  text-decoration:none;
-  color:var(--text);
-  padding:6px 0;
-}
-nav a.active{
-  font-weight:700;
-}
+    nav {
+      background: var(--navbg);
+      border-bottom: 1px solid var(--navline);
+    }
 
-main{
-  padding:36px 0 70px;
-}
+    nav .container {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding: 14px 20px;
+    }
 
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:22px;
-}
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 6px 0;
+    }
 
-h1{margin:0 0 10px;}
-h2{margin:28px 0 12px;}
-h3{margin:18px 0 8px;}
-p{margin:10px 0;}
-ul{margin:10px 0 0 22px;}
-a{color:var(--link);}
-a:hover{opacity:0.9;}
+    nav a.active {
+      font-weight: 700;
+    }
 
-hr{
-  border:none;
-  border-top:1px solid var(--line);
-  margin:28px 0;
-}
+    main {
+      padding: 36px 0 70px;
+    }
 
-/* News list */
-.news-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-.news-list li{
-  display:flex;
-  gap:18px;
-  padding:12px 0;
-  border-bottom:1px solid var(--line);
-}
-.news-date{
-  font-weight:700;
-  min-width:90px;
-  color:#444;
-}
-.news-text{color:#333;}
-/* Members grid cards */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  gap:22px;
-}
-.member-card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:18px;
-  text-align:center;
-}
-.member-card img{
-  width:150px;
-  height:150px;
-  object-fit:cover;
-  border-radius:50%;
-  display:block;
-  margin:0 auto 12px;
-}
-.member-card h3{
-  margin:10px 0 6px;
-}
-.member-card p{
-  margin:6px 0;
-  color:var(--muted);
-  font-size:14px;
-}
-/* Location layout */
-.location-wrap{
-  display:flex;
-  gap:20px;
-  align-items:flex-start;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-.map-box{
-  flex:1 1 640px;
-  min-width:320px;
-}
-.map-box iframe{
-  width:100%;
-  height:360px;
-  border:0;
-  display:block;
-  border-radius:12px;
-}
-.addr-box{
-  flex:0 1 320px;
-  min-width:240px;
-}
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px;
+    }
 
+    h1 {
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      margin: 28px 0 12px;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 10px 0 0 22px;
+    }
+
+    a {
+      color: var(--link);
+    }
+
+    a:hover {
+      opacity: 0.9;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 28px 0;
+    }
+
+    /* News list */
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-list li {
+      display: flex;
+      gap: 18px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .news-date {
+      font-weight: 700;
+      min-width: 90px;
+      color: #444;
+    }
+
+    .news-text {
+      color: #333;
+    }
+
+    /* Members grid cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .member-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .member-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 12px;
+    }
+
+    .member-card h3 {
+      margin: 10px 0 6px;
+    }
+
+    .member-card p {
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Location layout */
+    .location-wrap {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .map-box {
+      flex: 1 1 640px;
+      min-width: 320px;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 360px;
+      border: 0;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .addr-box {
+      flex: 0 1 320px;
+      min-width: 240px;
+    }
   </style>
-  <meta name="description" content="Darlington Lab at Concordia University. Research interests, publications, members, news and contact." />
+  <meta name="description"
+    content="Darlington Lab at Concordia University. Research interests, publications, members, news and contact." />
 </head>
+
 <body>
 
-<nav>
-  <div class="container">
-    <a class="active" href="index.html">Home</a>
-    <a href="members.html">Members</a>
-    <a href="publications.html">Publications</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-
-<main>
-  <div class="container">
-
-<div class="card">
-  <h1>Darlington Lab</h1>
-  <p>Department of Biology, Concordia University</p>
-  <p><strong>Principal Investigator:</strong> Dr. Peter Darlington</p>
-
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Theme: Immunology</li>
-    <li>Secondary Theme: Autonomic nervous system</li>
-  </ul>
-
-  <h2>News</h2>
-  <ul class="news-list">
-    <li>
-      <span class="news-date">2026-03</span>
-      <span class="news-text">Our paper was published in <em>Advanced Materials Technologies</em>.</span>
-    </li>
-    <li>
-      <span class="news-date">2026-03</span>
-      <span class="news-text">New lab website launched.</span>
-    </li>
-    <li>
-      <span class="news-date">2026-01</span>
-      <span class="news-text">Congratulations to Sara on starting her PhD.</span>
-    </li>
-  </ul>
-  <p style="margin-top:15px;"><a href="news.html">View all news →</a></p>
-
-  <h2>Current research projects</h2>
-  <ul>
-    <li>
-      The immunology laboratory explores how, and why, the immune system communicates with the rest of the body. For example, we study how stress hormones and autonomic drugs alter the function of T cells. Answering fundamental immunology questions will help advance knowledge related to autoimmune diseases such as multiple sclerosis. Our research is multidisciplinary, with students coming from the departments of Exercise Science, Biology, Psychology, Chemistry and Biochemistry backgrounds. Key methods include isolation of human white blood cells and plasma, sterile cell culture, cellular analysis of immune function, protein analysis (ELISA), RNA analysis (qPCR), flow cytometry based immuno-phenotyping and cell signalling. We study human cell lines, and immune cells obtained from human subjects to provoke acute sympathetic responses. We have active collaborations on extracellular vesicles, and advanced gene-editing technology.
-    </li>
-  </ul>
-
-  <hr />
-
-  <h2>Location</h2>
-  <div class="location-wrap">
-    <div class="map-box">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.3121478005976!2d-73.63801662219493!3d45.457226550811356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9172decec617d%3A0xe875adb3de2d89b!2sConcordia%20University%20School%20of%20Health!5e0!3m2!1szh-CN!2sca!4v1771370919265!5m2!1szh-CN!2sca"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+  <nav>
+    <div class="container">
+      <a class="active" href="index.html">Home</a>
+      <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+      <a href="news.html">News</a>
     </div>
-    <div class="addr-box">
-      <h3 style="margin-top:0;">Address</h3>
-      <p style="margin:0 0 12px 0;">
-        7200 Rue Sherbrooke O,<br />
-        Montréal, QC H4B 1R6
-      </p>
-      <p style="margin:0;">
-        <a href="https://www.google.com/maps?q=7200+Rue+Sherbrooke+O,+Montr%C3%A9al,+QC+H4B+1R6" target="_blank" rel="noopener">
-          View on Google Maps
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
+  </nav>
 
-  </div>
-</main>
+  <main>
+    <div class="container">
+
+      <div class="card">
+        <h1>Darlington Lab</h1>
+        <p>Department of Biology, Concordia University</p>
+        <p><strong>Principal Investigator:</strong> Dr. Peter Darlington</p>
+
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Theme: Immunology</li>
+          <li>Secondary Theme: Autonomic nervous system</li>
+        </ul>
+
+        <h2>News</h2>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">2026-03</span>
+            <span class="news-text">Our paper was published in <em>Advanced Materials Technologies</em>.</span>
+          </li>
+          <li>
+            <span class="news-date">2026-03</span>
+            <span class="news-text">New lab website launched.</span>
+          </li>
+          <li>
+            <span class="news-date">2026-01</span>
+            <span class="news-text">Congratulations to Sara on starting her PhD.</span>
+          </li>
+        </ul>
+        <p style="margin-top:15px;"><a href="news.html">View all news →</a></p>
+
+        <h2>Current research projects</h2>
+        <ul>
+          <li>
+            The immunology laboratory explores how, and why, the immune system communicates with the rest of the body.
+            For example, we study how stress hormones and autonomic drugs alter the function of T cells. Answering
+            fundamental immunology questions will help advance knowledge related to autoimmune diseases such as multiple
+            sclerosis. Our research is multidisciplinary, with students coming from the departments of Exercise Science,
+            Biology, Psychology, Chemistry and Biochemistry backgrounds. Key methods include isolation of human white
+            blood cells and plasma, sterile cell culture, cellular analysis of immune function, protein analysis
+            (ELISA), RNA analysis (qPCR), flow cytometry based immuno-phenotyping and cell signalling. We study human
+            cell lines, and immune cells obtained from human subjects to provoke acute sympathetic responses. We have
+            active collaborations on extracellular vesicles, and advanced gene-editing technology.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h2>Location</h2>
+        <div class="location-wrap">
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.3121478005976!2d-73.63801662219493!3d45.457226550811356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9172decec617d%3A0xe875adb3de2d89b!2sConcordia%20University%20School%20of%20Health!5e0!3m2!1szh-CN!2sca!4v1771370919265!5m2!1szh-CN!2sca"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="addr-box">
+            <h3 style="margin-top:0;">Address</h3>
+            <p style="margin:0 0 12px 0;">
+              7200 Rue Sherbrooke O,<br />
+              Montréal, QC H4B 1R6
+            </p>
+            <p style="margin:0;">
+              <a href="https://www.google.com/maps?q=7200+Rue+Sherbrooke+O,+Montr%C3%A9al,+QC+H4B+1R6" target="_blank"
+                rel="noopener">
+                View on Google Maps
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
 </body>
+
 </html>
