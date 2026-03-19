@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Darlington Lab</title>
+  <title>Research | Darlington Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -115,14 +115,31 @@
     .volunteer-box ul{margin:10px 0 10px 22px;font-size:15px;color:#374f72;}
     .volunteer-box li{margin-bottom:6px;}
     .volunteer-box .contact-line{font-size:15px;color:#374f72;margin-top:14px;}
+
+    .tag-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:4px;}
+    .tag-chip{
+      border-radius:12px;padding:14px 18px;
+      background:rgba(255,255,255,0.55);
+      border-top:1px solid rgba(255,255,255,0.90);
+      border-left:1px solid rgba(255,255,255,0.68);
+      border-right:1px solid rgba(170,210,245,0.22);
+      border-bottom:1px solid rgba(158,200,238,0.18);
+      box-shadow:0 1px 0 rgba(255,255,255,0.80) inset;
+      position:relative;overflow:hidden;
+    }
+    .tag-chip::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;
+      background:rgba(255,255,255,0.90);pointer-events:none;}
+    .tag-chip>*{position:relative;z-index:2;}
+    .tag-chip .chip-name{font-size:15px;font-weight:500;color:#1c2b4a;margin-bottom:3px;}
+    .tag-chip .chip-sub{font-size:12px;color:#7a9acc;}
 </style>
 </head>
 <body>
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">Darlington Lab</a>
-    <div class="nav-links"><a class="active" href="index.html">Home</a>
-      <a href="research.html">Research</a>
+    <div class="nav-links"><a href="index.html">Home</a>
+      <a class="active" href="research.html">Research</a>
       <a href="members.html">Members</a>
       <a href="publications.html">Publications</a>
       <a href="contact.html">Contact</a>
@@ -133,63 +150,38 @@
   <div class="card g">
     <div class="g-edge"></div>
     
-<h1>Darlington Lab</h1>
-<p>Department of Biology, Concordia University</p>
-<p><strong>Principal Investigator:</strong> Dr. Peter Darlington</p>
+<h1>Research</h1>
 
-<h2 style="margin-top:32px;">News</h2>
-<ul class="news-list">
-  <li><span class="news-date">2026-03</span><span class="news-text">Our paper was published in <em>Advanced Materials Technologies</em>.</span></li>
-  <li><span class="news-date">2026-03</span><span class="news-text">New lab website launched.</span></li>
-  <li><span class="news-date">2026-01</span><span class="news-text">Congratulations to Sara on starting her PhD.</span></li>
+<h2 style="margin-top:32px;">Research Interests</h2>
+<ul>
+  <li>Theme: Immunology</li>
+  <li>Secondary Theme: Autonomic nervous system</li>
 </ul>
-<p style="margin-top:14px;"><a href="news.html">View all news →</a></p>
-
 
 <hr />
 
-<h2>About the Lab</h2>
-<p>The lab investigates how the immune system communicates with the rest of the body, with a focus on interactions between stress signaling and immune cell function. We study how autonomic inputs and pharmacological agents influence T cells and broader immune responses. This work contributes to understanding autoimmune conditions such as multiple sclerosis.</p>
-<p><a href="research.html">Learn more →</a></p>
+<h2>Current Projects</h2>
+<p>The immunology laboratory explores how, and why, the immune system communicates with the rest of the body. For example, we study how stress hormones and autonomic drugs alter the function of T cells. Answering fundamental immunology questions will help advance knowledge related to autoimmune diseases such as multiple sclerosis. Our research is multidisciplinary, with students coming from the departments of Exercise Science, Biology, Psychology, Chemistry and Biochemistry backgrounds. We study human cell lines, and immune cells obtained from human subjects to provoke acute sympathetic responses. We have active collaborations on extracellular vesicles, and advanced gene-editing technology.</p>
 
 <hr />
 
-<h2>Research Highlights</h2>
-<div class="grid" style="margin-top:10px;">
-  <div class="member-card">
-    <h3>Immunology</h3>
-    <p class="role">T cell regulation and immune signalling</p>
-  </div>
-  <div class="member-card">
-    <h3>Autonomic Nervous System</h3>
-    <p class="role">Neuro-immune interactions under stress and drug modulation</p>
-  </div>
-  <div class="member-card">
-    <h3>Collaborations</h3>
-    <p class="role">Extracellular vesicles and gene-editing technologies</p>
-  </div>
+<h2>Main Techniques</h2>
+<div class="tag-grid">
+  <div class="tag-chip"><div class="chip-name">Cell Isolation</div><div class="chip-sub">Human white blood cells and plasma</div></div>
+  <div class="tag-chip"><div class="chip-name">Sterile Cell Culture</div><div class="chip-sub">Primary cells and cell lines</div></div>
+  <div class="tag-chip"><div class="chip-name">ELISA</div><div class="chip-sub">Protein analysis</div></div>
+  <div class="tag-chip"><div class="chip-name">qPCR</div><div class="chip-sub">RNA analysis</div></div>
+  <div class="tag-chip"><div class="chip-name">Flow Cytometry</div><div class="chip-sub">Immuno-phenotyping and cell signalling</div></div>
+  <div class="tag-chip"><div class="chip-name">Immune Function Analysis</div><div class="chip-sub">Cellular assays</div></div>
 </div>
 
 <hr />
 
-<h2>Featured Publication</h2>
-<div class="member-card" style="text-align:left; padding:28px 24px;">
-  <p>Recent work from the lab has been published in <em>Advanced Materials Technologies</em>, highlighting ongoing multidisciplinary research efforts.</p>
-  <p><a href="publications.html">View all publications →</a></p>
-</div>
-
-<hr />
-
-<h2>Location</h2>
-<div class="location-wrap">
-  <div class="map-box">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.3121478005976!2d-73.63801662219493!3d45.457226550811356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9172decec617d%3A0xe875adb3de2d89b!2sConcordia%20University%20School%20of%20Health!5e0!3m2!1szh-CN!2sca!4v1771370919265!5m2!1szh-CN!2sca" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-  <div class="addr-box">
-    <h3>Address</h3>
-    <p>7200 Rue Sherbrooke O,<br>Montréal, QC H4B 1R6</p>
-    <p><a href="https://www.google.com/maps?q=7200+Rue+Sherbrooke+O,+Montr%C3%A9al,+QC+H4B+1R6" target="_blank" rel="noopener">View on Google Maps</a></p>
-  </div>
+<h2>Cell Lines We Use</h2>
+<div class="tag-grid">
+  <div class="tag-chip"><div class="chip-name">Jurkat</div><div class="chip-sub">Human T lymphocyte cell line</div></div>
+  <div class="tag-chip"><div class="chip-name">Example</div><div class="chip-sub">Example description</div></div>
+  <div class="tag-chip"><div class="chip-name">Example</div><div class="chip-sub">Example description</div></div>
 </div>
 
   </div>
