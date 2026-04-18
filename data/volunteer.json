@@ -13,5 +13,17 @@
     ],
     "contact_intro": "If you or anyone you know fulfills these requirements please contact:",
     "contact_email": "concordia.immunology@gmail.com"
+  },
+  {
+    "title": "Lab Volunteer",
+    "subtitle": "",
+    "description": "This opportunity is open to undergraduate students, and no prior lab experience is required. New volunteers usually start with safety training and observing ongoing work. Then gradually move on to hands-on tasks as they become more comfortable.",
+    "requirements_heading": "Helpful skills and experience:",
+    "requirements": [
+      "Interest in immunology, or willingness to learn",
+      "Basic understanding of immunology concepts (helpful but not required)"
+    ],
+    "contact_intro": "If you willing to apply, please reach out to Dr. Darlington:",
+    "contact_email": "peter.darlington@concordia.ca"
   }
 ]
