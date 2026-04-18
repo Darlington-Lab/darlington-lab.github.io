@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://darlington-lab.github.io/sitemap.xml
