@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Study Participants Wanted",
+    "subtitle": "Study title: \"Hormonal Regulation of T Cell Genomics\"",
+    "description": "The Darlington Laboratory in the Department of Health, Kinesiology & Applied Physiology at Concordia University is seeking participants. The goal of the study is to understand how hormones influence the immune cells which play an important role in health. The study consists of one visit of approximately 30 minutes. You will be asked to give a small amount of blood. Refreshments will be provided.",
+    "requirements_heading": "Participants should:",
+    "requirements": [
+      "Be at least 18 years old",
+      "Be comfortable with blood draws and needles",
+      "Not be taking any prescription medications that affect blood pressure or immune function",
+      "Have no chronic medical conditions (autoimmune disease, cancer, lung or heart disease)",
+      "Have no vaccinations (including flu shots) or consume recreational drugs within the past 2 weeks"
+    ],
+    "contact_intro": "If you or anyone you know fulfills these requirements please contact:",
+    "contact_email": "concordia.immunology@gmail.com"
+  },
+  {
+    "title": "Lab Volunteer",
+    "subtitle": "",
+    "description": "This opportunity is open to undergraduate students, and no prior lab experience is required. New volunteers usually start with safety training and observing ongoing work. Then gradually move on to hands-on tasks as they become more comfortable.",
+    "requirements_heading": "Helpful skills and experience:",
+    "requirements": [
+      "Interest in immunology, or willingness to learn",
+      "Basic understanding of immunology concepts (helpful but not required)"
+    ],
+    "contact_intro": "If you willing to apply, please reach out to Dr. Darlington:",
+    "contact_email": "peter.darlington@concordia.ca"
+  }
+]
