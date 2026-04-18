@@ -1,0 +1,69 @@
+{
+  "current": [
+    {
+      "name": "Peter J. Darlington",
+      "role": "Principal Investigator",
+      "field": "Immunology",
+      "photo": "images/eg.jpg"
+    },
+    {
+      "name": "Fatemeh Gholizadeh",
+      "role": "PhD Student",
+      "field": "Here is the sample",
+      "photo": "images/eg.jpg"
+    },
+    {
+      "name": "Negaralsadat Emamnia",
+      "role": "PhD Student",
+      "field": "Here is the sample",
+      "photo": "images/eg.jpg"
+    },
+    {
+      "name": "Sara Davoudabadi",
+      "role": "PhD Student",
+      "field": "Here is the sample",
+      "photo": "images/eg.jpg"
+    },
+    {
+      "name": "Hajar Lamri",
+      "role": "Undergraduate Student",
+      "field": "Here is the sample",
+      "photo": "images/eg.jpg"
+    },
+    {
+      "name": "Kyle Coelho",
+      "role": "Undergraduate Student",
+      "field": "Here is the sample",
+      "photo": "images/eg.jpg"
+    },
+    {
+      "name": "Claudia Fodjo N.",
+      "role": "Undergraduate Student",
+      "field": "Here is the sample",
+      "photo": "images/eg.jpg"
+    },
+    {
+      "name": "Alice",
+      "role": "Undergraduate Student",
+      "field": "Systems and Information Biology",
+      "photo": "images/Alice.JPG"
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Mehri Hajiaghayi",
+      "role": "PhD, 2025",
+      "field": "Immunology"
+    },
+    {
+      "name": "Example Alumni",
+      "role": "MSc, 2022",
+      "field": "Kinesiology"
+    },
+    {
+      "name": "Example Alumni",
+      "role": "Undergraduate, 2021",
+      "field": "Biology"
+    }
+  ]
+}

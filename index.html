@@ -10,342 +10,22 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 400;
-      line-height: 1.72;
-      color: #1c2b4a;
-      min-height: 100vh;
-      position: relative;
-    }
-
-    /* ── full page background ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background-image: url('bg1.jpg');
-      background-size: cover;
-      background-position: center 10%;
-      opacity: 0.6;
-    }
-
-    /* fade bottom half of photo into plain bg color */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 1;
-      background: linear-gradient(to bottom,
-          transparent 0%,
-          transparent 45%,
-          rgba(243, 247, 252, 0.5) 62%,
-          rgba(243, 247, 252, 0.92) 76%,
-          rgba(243, 247, 252, 1.0) 88%);
-    }
-
-    /* everything sits above the bg layers */
-    nav,
     .wrap {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* ── glass ── */
-    .g {
-      position: relative;
-      background: rgba(255, 255, 255, 0.72);
-      backdrop-filter: blur(20px) brightness(1.02) saturate(1.06);
-      -webkit-backdrop-filter: blur(20px) brightness(1.02) saturate(1.06);
-      border-top: 1px solid rgba(255, 255, 255, 0.92);
-      border-left: 1px solid rgba(255, 255, 255, 0.72);
-      border-right: 1px solid rgba(170, 210, 245, 0.26);
-      border-bottom: 1px solid rgba(158, 200, 238, 0.20);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.88) inset, -1px 0 0 rgba(255, 255, 255, 0.50) inset,
-        0 8px 32px rgba(90, 140, 210, 0.08), 0 2px 8px rgba(90, 140, 210, 0.06);
-      overflow: hidden;
-    }
-
-    .g::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 8%;
-      right: 8%;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.96);
-      pointer-events: none;
-      z-index: 9;
-    }
-
-    .g::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(128deg, transparent 24%, rgba(255, 255, 255, 0.18) 31%, rgba(255, 255, 255, 0.22) 36%, rgba(255, 255, 255, 0.10) 42%, transparent 53%);
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    .g-edge {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(152, 200, 240, 0.28) 25%, rgba(172, 215, 250, 0.40) 50%, rgba(152, 200, 240, 0.28) 75%, transparent);
-      pointer-events: none;
-    }
-
-    .g>* {
-      position: relative;
-      z-index: 3;
-    }
-
-    /* ── nav ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(243, 248, 254, 0.82);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(170, 210, 245, 0.22);
-    }
-
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 54px;
-    }
-
-    .nav-logo {
-      font-family: 'Lora', serif;
-      font-size: 17px;
-      font-weight: 500;
-      color: #111e3a;
-      text-decoration: none;
-      letter-spacing: -0.2px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 4px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-size: 13.5px;
-      font-weight: 400;
-      color: #6b7c9a;
-      padding: 6px 13px;
-      border-radius: 8px;
-      transition: color .18s, background .18s;
-    }
-
-    .nav-links a:hover {
-      color: #1c2b4a;
-      background: rgba(255, 255, 255, 0.60);
-    }
-
-    .nav-links a.active {
-      font-weight: 500;
-      color: #1c2b4a;
-    }
-
-    /* ── layout ── */
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 320px 28px 64px;
+      padding-top: 320px;
       display: flex;
       flex-direction: column;
       gap: 16px;
-    }
-
-    .card {
-      border-radius: 20px;
-      padding: 40px 44px 44px;
-    }
-
-    /* ── type ── */
-    .sec-label {
-      font-size: 10.5px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #9ab0cc;
-      margin-bottom: 14px;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid rgba(170, 210, 245, 0.28);
-      margin: 32px 0;
-    }
-
-    h1 {
-      font-family: 'Lora', serif;
-      font-size: 44px;
-      font-weight: 500;
-      letter-spacing: -0.3px;
-      color: #111e3a;
-      margin: 0 0 10px;
-      line-height: 1.1;
-    }
-
-    h2 {
-      font-family: 'Lora', serif;
-      font-size: 22px;
-      font-weight: 500;
-      color: #111e3a;
-      margin: 0 0 14px;
-      line-height: 1.2;
-    }
-
-    h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      color: #2a3a58;
-      margin: 0 0 8px;
-    }
-
-    p {
-      font-size: 16px;
-      margin: 7px 0;
-      color: #374f72;
-    }
-
-    strong {
-      font-weight: 500;
-      color: #1c2b4a;
-    }
-
-    a {
-      color: #2b5ec7;
-      text-decoration: none;
-      transition: color .18s;
-    }
-
-    a:hover {
-      color: #1a3fa0;
-    }
-
-    ul {
-      margin: 10px 0 0 22px;
-      font-size: 16px;
-      color: #374f72;
-    }
-
-    li {
-      margin-bottom: 7px;
-    }
-
-    /* ── news ── */
-    .news-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .news-list li {
-      display: flex;
-      gap: 22px;
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(170, 210, 245, 0.22);
-    }
-
-    .news-list li:last-child {
-      border-bottom: none;
-    }
-
-    .news-date {
-      font-size: 13px;
-      font-weight: 400;
-      min-width: 74px;
-      color: #7a9acc;
-      padding-top: 2px;
-    }
-
-    .news-text {
-      font-size: 15px;
-      color: #2e3f5c;
-    }
-
-    .news-text em {
-      font-style: italic;
-      color: #1c2b4a;
-    }
-
-    /* ── location ── */
-    .location-wrap {
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .map-box {
-      flex: 1 1 600px;
-      min-width: 300px;
-    }
-
-    .map-box iframe {
-      width: 100%;
-      height: 320px;
-      border: 0;
-      display: block;
-      border-radius: 14px;
-      outline: 1px solid rgba(170, 210, 245, 0.28);
-    }
-
-    .addr-box {
-      flex: 0 1 260px;
-      min-width: 200px;
-    }
-
-    .addr-box h3 {
-      margin: 0 0 8px;
-    }
-
-    .addr-box p {
-      font-size: 14px;
-      color: #374f72;
-      margin: 0 0 12px;
     }
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <a class="nav-logo" href="index.html">Darlington Lab</a>
-      <div class="nav-links">
-        <a class="active" href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="members.html">Members</a>
-        <a href="publications.html">Publications</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <div id="nav-placeholder"></div>
+  <script src="nav.js"></script>
+  <script>renderNav('index.html')</script>
 
   <div class="wrap">
 
@@ -357,13 +37,7 @@
 
       <div style="margin-top:32px;">
         <div class="sec-label">News</div>
-        <ul class="news-list">
-          <li><span class="news-date">2026-03</span><span class="news-text">Our paper was published in <em>Advanced
-                Materials Technologies</em>.</span></li>
-          <li><span class="news-date">2026-03</span><span class="news-text">New lab website launched.</span></li>
-          <li><span class="news-date">2026-01</span><span class="news-text">Congratulations to Sara on starting her
-              PhD.</span></li>
-        </ul>
+        <ul class="news-list" id="index-news"></ul>
         <p style="margin-top:14px;"><a href="news.html">View all news →</a></p>
       </div>
     </div>
@@ -387,6 +61,18 @@
     </div>
 
   </div>
+  <script>
+    fetch('data/news.json')
+      .then(r => r.json())
+      .then(items => {
+        const list = document.getElementById('index-news');
+        items.slice(0, 3).forEach(item => {
+          const li = document.createElement('li');
+          li.innerHTML = `<span class="news-date">${item.date}</span><span class="news-text">${item.text}</span>`;
+          list.appendChild(li);
+        });
+      });
+  </script>
 </body>
 
 </html>

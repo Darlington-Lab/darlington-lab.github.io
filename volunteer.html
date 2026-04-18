@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Volunteer | Darlington Lab</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <div id="nav-placeholder"></div>
+  <script src="nav.js"></script>
+  <script>renderNav('volunteer.html')</script>
+  <div class="wrap">
+    <div class="card g">
+      <div class="g-edge"></div>
+      <h1>Volunteer</h1>
+      <p style="margin-top:8px;color:#374f72;">We are currently recruiting study participants. See the open opportunity below.</p>
+      <div id="volunteer-list" style="margin-top:28px; display:flex; flex-direction:column; gap:20px;"></div>
+    </div>
+  </div>
+
+  <script>
+    fetch('data/volunteer.json')
+      .then(r => r.json())
+      .then(studies => {
+        const container = document.getElementById('volunteer-list');
+        studies.forEach(s => {
+          const reqItems = s.requirements.map(r => `<li>${r}</li>`).join('');
+          const box = document.createElement('div');
+          box.className = 'volunteer-box';
+          box.innerHTML = `
+            <h3>${s.title}</h3>
+            <p class="vol-sub">${s.subtitle}</p>
+            <p>${s.description}</p>
+            <p><strong>${s.requirements_heading}</strong></p>
+            <ul>${reqItems}</ul>
+            <p>${s.contact_intro}</p>
+            <a class="vol-email" href="mailto:${s.contact_email}">${s.contact_email}</a>
+          `;
+          container.appendChild(box);
+        });
+      });
+  </script>
+</body>
+</html>

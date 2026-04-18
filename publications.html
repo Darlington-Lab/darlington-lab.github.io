@@ -8,474 +8,50 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 400;
-      line-height: 1.72;
-      color: #1c2b4a;
-      background:
-        radial-gradient(ellipse 45% 30% at 8% 0%, rgba(186, 219, 255, 0.25) 0%, transparent 55%),
-        radial-gradient(ellipse 38% 28% at 92% 6%, rgba(200, 225, 255, 0.16) 0%, transparent 50%),
-        linear-gradient(168deg, #f0f5fb 0%, #f7f9ff 50%, #f1f6f2 100%);
-      min-height: 100vh;
-    }
-
-    /* ── full page background ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background-image: url('bg1.jpg');
-      background-size: cover;
-      background-position: center 10%;
-      opacity: 0.6;
-    }
-
-    /* fade bottom half of photo into plain bg color */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 1;
-      background: linear-gradient(to bottom,
-          transparent 0%,
-          transparent 45%,
-          rgba(243, 247, 252, 0.5) 62%,
-          rgba(243, 247, 252, 0.92) 76%,
-          rgba(243, 247, 252, 1.0) 88%);
-    }
-
-    /* everything sits above the bg layers */
-    nav,
-    .wrap {
-      position: relative;
-      z-index: 2;
-    }
-
-    .g {
-      position: relative;
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(20px) brightness(1.02) saturate(1.06);
-      -webkit-backdrop-filter: blur(20px) brightness(1.02) saturate(1.06);
-      border-top: 1px solid rgba(255, 255, 255, 0.92);
-      border-left: 1px solid rgba(255, 255, 255, 0.72);
-      border-right: 1px solid rgba(170, 210, 245, 0.26);
-      border-bottom: 1px solid rgba(158, 200, 238, 0.20);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.88) inset, -1px 0 0 rgba(255, 255, 255, 0.50) inset,
-        0 8px 32px rgba(90, 140, 210, 0.08), 0 2px 8px rgba(90, 140, 210, 0.06);
-      overflow: hidden;
-    }
-
-    .g::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 8%;
-      right: 8%;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.96);
-      pointer-events: none;
-      z-index: 9;
-    }
-
-    .g::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(128deg, transparent 24%, rgba(255, 255, 255, 0.18) 31%, rgba(255, 255, 255, 0.22) 36%, rgba(255, 255, 255, 0.10) 42%, transparent 53%);
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    .g-edge {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(152, 200, 240, 0.28) 25%, rgba(172, 215, 250, 0.40) 50%, rgba(152, 200, 240, 0.28) 75%, transparent);
-      pointer-events: none;
-    }
-
-    .g>* {
-      position: relative;
-      z-index: 3;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(245, 250, 255, 0.88);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(170, 210, 245, 0.22);
-    }
-
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 54px;
-    }
-
-    .nav-logo {
-      font-family: 'Lora', serif;
-      font-size: 17px;
-      font-weight: 500;
-      color: #111e3a;
-      text-decoration: none;
-      letter-spacing: -0.2px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 4px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-size: 13.5px;
-      font-weight: 400;
-      color: #6b7c9a;
-      padding: 6px 13px;
-      border-radius: 8px;
-      transition: color .18s, background .18s;
-    }
-
-    .nav-links a:hover {
-      color: #1c2b4a;
-      background: rgba(255, 255, 255, 0.60);
-    }
-
-    .nav-links a.active {
-      font-weight: 500;
-      color: #1c2b4a;
-    }
-
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 32px 28px 64px;
-    }
-
-    .card {
-      border-radius: 20px;
-      padding: 40px 44px 44px;
-    }
-
-    .sec-label {
-      font-size: 10.5px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #9ab0cc;
-      margin-bottom: 14px;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid rgba(170, 210, 245, 0.28);
-      margin: 32px 0;
-    }
-
-    h1 {
-      font-family: 'Lora', serif;
-      font-size: 44px;
-      font-weight: 500;
-      letter-spacing: -0.3px;
-      color: #111e3a;
-      margin: 0 0 10px;
-      line-height: 1.1;
-    }
-
-    h2 {
-      font-family: 'Lora', serif;
-      font-size: 22px;
-      font-weight: 500;
-      color: #111e3a;
-      margin: 0 0 14px;
-      line-height: 1.2;
-    }
-
-    h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      color: #2a3a58;
-      margin: 0 0 8px;
-    }
-
-    p {
-      font-size: 16px;
-      margin: 7px 0;
-      color: #374f72;
-    }
-
-    strong {
-      font-weight: 500;
-      color: #1c2b4a;
-    }
-
-    a {
-      color: #2b5ec7;
-      text-decoration: none;
-      transition: color .18s;
-    }
-
-    a:hover {
-      color: #1a3fa0;
-    }
-
-    ul {
-      margin: 10px 0 0 22px;
-      font-size: 16px;
-      color: #374f72;
-    }
-
-    li {
-      margin-bottom: 7px;
-    }
-
-    .news-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .news-list li {
-      display: flex;
-      gap: 22px;
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(170, 210, 245, 0.22);
-    }
-
-    .news-list li:last-child {
-      border-bottom: none;
-    }
-
-    .news-date {
-      font-size: 13px;
-      font-weight: 400;
-      min-width: 74px;
-      color: #7a9acc;
-      padding-top: 2px;
-    }
-
-    .news-text {
-      font-size: 15px;
-      color: #2e3f5c;
-    }
-
-    .news-text em {
-      font-style: italic;
-      color: #1c2b4a;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 14px;
-    }
-
-    .member-card {
-      border-radius: 14px;
-      padding: 24px 18px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.55);
-      border-top: 1px solid rgba(255, 255, 255, 0.90);
-      border-left: 1px solid rgba(255, 255, 255, 0.68);
-      border-right: 1px solid rgba(170, 210, 245, 0.22);
-      border-bottom: 1px solid rgba(158, 200, 238, 0.18);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.80) inset;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .member-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 8%;
-      right: 8%;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.90);
-      pointer-events: none;
-    }
-
-    .member-card>* {
-      position: relative;
-      z-index: 2;
-    }
-
-    .member-card img {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 14px;
-      border: 1px solid rgba(255, 255, 255, 0.72);
-      box-shadow: 0 3px 14px rgba(80, 130, 210, 0.12);
-    }
-
-    .member-card h3 {
-      font-size: 15px;
-      font-weight: 500;
-      color: #1c2b4a;
-      margin: 0 0 4px;
-    }
-
-    .member-card .role {
-      font-size: 13px;
-      color: #6b7c9a;
-      margin: 0;
-    }
-
-    .member-card .field {
-      font-size: 12px;
-      color: #9ab0cc;
-      margin: 3px 0 0;
-    }
-
-    .pub-year {
-      font-family: 'Lora', serif;
-      font-size: 19px;
-      font-weight: 500;
-      color: #111e3a;
-      margin: 28px 0 10px;
-    }
-
-    .pub-year:first-of-type {
-      margin-top: 0;
-    }
-
-    .pub-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .pub-list li {
-      font-size: 15px;
-      color: #374f72;
-      line-height: 1.65;
-      padding: 10px 0 10px 16px;
-      border-bottom: 1px solid rgba(170, 210, 245, 0.18);
-      position: relative;
-    }
-
-    .pub-list li:last-child {
-      border-bottom: none;
-    }
-
-    .pub-list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 19px;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: rgba(120, 170, 230, 0.5);
-    }
-
-    .pub-list li em {
-      font-style: italic;
-    }
-
-    .pub-list a {
-      font-size: 13px;
-      color: #2b5ec7;
-      margin-left: 6px;
-    }
-
-    .location-wrap {
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .map-box {
-      flex: 1 1 600px;
-      min-width: 300px;
-    }
-
-    .map-box iframe {
-      width: 100%;
-      height: 320px;
-      border: 0;
-      display: block;
-      border-radius: 14px;
-      outline: 1px solid rgba(170, 210, 245, 0.28);
-    }
-
-    .addr-box {
-      flex: 0 1 260px;
-      min-width: 200px;
-    }
-
-    .addr-box h3 {
-      margin: 0 0 8px;
-    }
-
-    .addr-box p {
-      font-size: 14px;
-      color: #374f72;
-      margin: 0 0 12px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a class="nav-logo" href="index.html">Darlington Lab</a>
-      <div class="nav-links"><a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="members.html">Members</a>
-        <a class="active" href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
-        <a href="news.html">News</a>
-      </div>
-    </div>
-  </nav>
+  <div id="nav-placeholder"></div>
+  <script src="nav.js"></script>
+  <script>renderNav('publications.html')</script>
   <div class="wrap">
     <div class="card g">
       <div class="g-edge"></div>
-
       <h1>Publications</h1>
-
-      <p class="pub-year">Latest 10 articles published as of Spring 2026:</p>
-      <ul class="pub-list">
-        <li>1.    Fatemeh Gholizadeh, Mehri Hajiaghayi, Niloufar Rahbari, Jennifer S. Choi, Alexia Como, Maryam Kazerouni, Melika Kargar, Aude Pinard-LaRoche, Steve C.C. Shih, Peter J. Darlington. The α7 Nicotinic Acetylcholine Receptor Suppresses Human Memory Th1, Th2, and Th17 Cell Phenotype. European Journal of Immunology, Accepted in press March 2026</li>
-        <li>2.    Mehri Hajiaghayi, Fatemeh Gholizadeh, Niloufar Rahbari, Negaralsadat Emamnia, Steve C.C. Shih, Peter J. Darlington “Nebivolol prevents exhausted T cells and enhances cytotoxicity against MCF-7 breast cancer cells in a β2-adrenergic receptor-dependent manner” Clinical & Experimental Immunology, Accepted  in press March 2026</li>
-        <li>3.    Samuel R. Little, Niloufar Rahbari, Fatemeh Gholizadeh, Mehri Hajiaghayi, Fanny-Mei Cloarec-Ung, Joel Phillips, Hugo Sinha, Alison Hirukawa, David JHF Knapp, Peter J. Darlington, Steve C.C. Shih. A Digital Microfluidic Platform for the Microscale Production of Functional Immune Cell Therapies. 2025 Analytical Chemistry, 2025, 97 (21), 11026-11034, DOI: 10.1021/acs.analchem.4c06911</li>
-        <li>4.    Fatemeh Gholizadeh, Mehri Hajiaghayi, Jennifer S. Choi, Samuel R. Little, Niloufar Rahbari, Kelly Brotto, Eric Han, Steve C.C. Shih, Peter J. Darlington, Modulatory Effects of M3 Muscarinic Acetylcholine Receptor on Inflammatory Profiles of Human Memory T Helper Cells. The Journal of Immunology. 2025, V00, p 1-12, https://doi.org/10.1093/jimmun/vkaf086</li>
-        <li>5.    Ana Baez; Davindra Singh; Stephanie He; Mehri Hajiaghayi; Fatemeh Gholizadeh; Peter J. Darlington, Brandon Helfield, Immunomodulation of Human T cells by Microbubble-Mediated Focused Ultrasound, 2024. Frontiers in Immunology, 2024 V15 p 1-14, DOI: 10.3389/fimmu.2024.1486744</li>
-        <li>6.    Mehri Hajiaghayi, Fatemeh Gholizadeh, Eric Han, Samuel R. Little, Niloufar Rahbari, Isabella Ardila, Carolina Lopez Naranjo, Kasra Tehranimeh, Steve C.C. Shih, Peter J. Darlington, β2-Adrenergic Biased Agonist Inhibits the Development of Th17 and the Response of Memory Th17 Cells in an NF-κB-Dependent Manner. Frontiers in Immunology, 2024 V15, p 1-14 DOI 10.3389/fimmu.2024.1446424</li>
-        <li>7.    Samuel R. Little, Ziuwin Leung, Angela B.V. Quach, Alison Hirukawa, Fatemeh Gholizadeh, Mehri Hajiaghayi, Peter J. Darlington, Steve C.C. Shih, A Tri-Droplet Liquid Structure for Highly Efficient Intracellular Delivery in Primary Mammalian Cells Using Digital Microfluidics, Advanced Materials Technologies, 2023, 8 (21) 1-15 online https://doi.org/10.1002/ admt.202300719</li>
-        <li>8.    Catalina Marysol Carvajal Gonczi*, Mehri Hajiaghayi*, Fatemeh Gholizadeh, Maria Auxiliadora Xavier Soares, Fadi Touma, Carolina Lopez Naranjo, Amanda J. Rios, Chelsea Pozzebon, Tina Daigneault, Kelly Burchell-Reyes, Peter J. Darlington, The β2-adrenergic receptor agonist terbutaline upregulates T helper-17 cells in a protein kinase A-dependent manner, Human Immunology, 2023, Oct;84(10):515-524 *shared 1st author, DOI: 10.1016/j.humimm.2023.06.007</li>
-        <li>9.    Pablo Godoy, Peter J. Darlington, Malcolm Whiteway. Genetic screening of Candida albicans inactivation mutants identifies new genes involved in macrophage-fungal cell interactions. Frontiers Microbiology. 05 April 2022, volume 13, doi.org/10.3389/fmicb.2022.833655</li> 
-        <li>10.    Catalina Marysol Carvajal Gonczi, Fadi Touma, Tina Daigneault, Chelsea Pozzebon, Kelly Burchell-Reyes, Peter J. Darlington. Modulation of IL-17A and IFNγ by β2-adrenergic agonist terbutaline and inverse-agonist nebivolol, influence of ADRB2 polymorphisms. AIMS Allergy and Immunology, 2021, Volume 5, Issue 4: 222-239. doi: 10.3934/Allergy. 2021017</li>  
-      </ul>
-
+      <h2 id="pub-title" style="margin-top:10px;"></h2>
+      <div id="pub-container" style="margin-top:20px;"></div>
     </div>
   </div>
+
+  <script>
+    fetch('data/publications.json')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('pub-title').textContent = data.label;
+
+        const container = document.getElementById('pub-container');
+        container.innerHTML = '';
+
+        const list = document.createElement('ul');
+        list.className = 'pub-list';
+
+        data.entries.forEach(pub => {
+          const li = document.createElement('li');
+
+          const doiLink = pub.doi
+            ? ` <a href="${pub.doi}" target="_blank" rel="noopener">DOI</a>`
+            : '';
+
+          const status = pub.journal + '. ' + pub.year + '.';
+
+          li.innerHTML = `${pub.authors} <em>${pub.title}</em> ${status}${doiLink}`;
+          list.appendChild(li);
+        });
+
+        container.appendChild(list);
+      });
+  </script>
 </body>
 
 </html>

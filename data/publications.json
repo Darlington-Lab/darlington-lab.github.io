@@ -1,0 +1,75 @@
+{
+  "label": "Latest 10 articles as of Spring 2026",
+  "entries": [
+    {
+      "authors": "Fatemeh Gholizadeh, Mehri Hajiaghayi, Niloufar Rahbari, Jennifer S. Choi, Alexia Como, Maryam Kazerouni, Melika Kargar, Aude Pinard-LaRoche, Steve C.C. Shih, Peter J. Darlington.",
+      "title": "The α7 Nicotinic Acetylcholine Receptor Suppresses Human Memory Th1, Th2, and Th17 Cell Phenotype.",
+      "journal": "European Journal of Immunology",
+      "year": "Accepted in press March 2026",
+      "doi": null
+    },
+    {
+      "authors": "Mehri Hajiaghayi, Fatemeh Gholizadeh, Niloufar Rahbari, Negaralsadat Emamnia, Steve C.C. Shih, Peter J. Darlington.",
+      "title": "Nebivolol prevents exhausted T cells and enhances cytotoxicity against MCF-7 breast cancer cells in a β2-adrenergic receptor-dependent manner.",
+      "journal": "Clinical & Experimental Immunology",
+      "year": "Accepted in press March 2026",
+      "doi": null
+    },
+    {
+      "authors": "Samuel R. Little, Niloufar Rahbari, Fatemeh Gholizadeh, Mehri Hajiaghayi, Fanny-Mei Cloarec-Ung, Joel Phillips, Hugo Sinha, Alison Hirukawa, David JHF Knapp, Peter J. Darlington, Steve C.C. Shih.",
+      "title": "A Digital Microfluidic Platform for the Microscale Production of Functional Immune Cell Therapies.",
+      "journal": "Analytical Chemistry, 97 (21), 11026–11034",
+      "year": "2025",
+      "doi": "https://doi.org/10.1021/acs.analchem.4c06911"
+    },
+    {
+      "authors": "Fatemeh Gholizadeh, Mehri Hajiaghayi, Jennifer S. Choi, Samuel R. Little, Niloufar Rahbari, Kelly Brotto, Eric Han, Steve C.C. Shih, Peter J. Darlington.",
+      "title": "Modulatory Effects of M3 Muscarinic Acetylcholine Receptor on Inflammatory Profiles of Human Memory T Helper Cells.",
+      "journal": "The Journal of Immunology, V00, p 1–12",
+      "year": "2025",
+      "doi": "https://doi.org/10.1093/jimmun/vkaf086"
+    },
+    {
+      "authors": "Ana Baez, Davindra Singh, Stephanie He, Mehri Hajiaghayi, Fatemeh Gholizadeh, Peter J. Darlington, Brandon Helfield.",
+      "title": "Immunomodulation of Human T cells by Microbubble-Mediated Focused Ultrasound.",
+      "journal": "Frontiers in Immunology, V15, p 1–14",
+      "year": "2024",
+      "doi": "https://doi.org/10.3389/fimmu.2024.1486744"
+    },
+    {
+      "authors": "Mehri Hajiaghayi, Fatemeh Gholizadeh, Eric Han, Samuel R. Little, Niloufar Rahbari, Isabella Ardila, Carolina Lopez Naranjo, Kasra Tehranimeh, Steve C.C. Shih, Peter J. Darlington.",
+      "title": "β2-Adrenergic Biased Agonist Inhibits the Development of Th17 and the Response of Memory Th17 Cells in an NF-κB-Dependent Manner.",
+      "journal": "Frontiers in Immunology, V15, p 1–14",
+      "year": "2024",
+      "doi": "https://doi.org/10.3389/fimmu.2024.1446424"
+    },
+    {
+      "authors": "Samuel R. Little, Ziuwin Leung, Angela B.V. Quach, Alison Hirukawa, Fatemeh Gholizadeh, Mehri Hajiaghayi, Peter J. Darlington, Steve C.C. Shih.",
+      "title": "A Tri-Droplet Liquid Structure for Highly Efficient Intracellular Delivery in Primary Mammalian Cells Using Digital Microfluidics.",
+      "journal": "Advanced Materials Technologies, 8 (21), 1–15",
+      "year": "2023",
+      "doi": "https://doi.org/10.1002/admt.202300719"
+    },
+    {
+      "authors": "Catalina Marysol Carvajal Gonczi*, Mehri Hajiaghayi*, Fatemeh Gholizadeh, Maria Auxiliadora Xavier Soares, Fadi Touma, Carolina Lopez Naranjo, Amanda J. Rios, Chelsea Pozzebon, Tina Daigneault, Kelly Burchell-Reyes, Peter J. Darlington. (*shared first author)",
+      "title": "The β2-adrenergic receptor agonist terbutaline upregulates T helper-17 cells in a protein kinase A-dependent manner.",
+      "journal": "Human Immunology, Oct;84(10):515–524",
+      "year": "2023",
+      "doi": "https://doi.org/10.1016/j.humimm.2023.06.007"
+    },
+    {
+      "authors": "Pablo Godoy, Peter J. Darlington, Malcolm Whiteway.",
+      "title": "Genetic screening of Candida albicans inactivation mutants identifies new genes involved in macrophage-fungal cell interactions.",
+      "journal": "Frontiers in Microbiology, Volume 13",
+      "year": "2022",
+      "doi": "https://doi.org/10.3389/fmicb.2022.833655"
+    },
+    {
+      "authors": "Catalina Marysol Carvajal Gonczi, Fadi Touma, Tina Daigneault, Chelsea Pozzebon, Kelly Burchell-Reyes, Peter J. Darlington.",
+      "title": "Modulation of IL-17A and IFNγ by β2-adrenergic agonist terbutaline and inverse-agonist nebivolol, influence of ADRB2 polymorphisms.",
+      "journal": "AIMS Allergy and Immunology, Volume 5, Issue 4: 222–239",
+      "year": "2021",
+      "doi": "https://doi.org/10.3934/Allergy.2021017"
+    }
+  ]
+}
