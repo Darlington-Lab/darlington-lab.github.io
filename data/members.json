@@ -41,15 +41,14 @@
       "role": "Undergraduate Student",
       "field": "Here is the sample",
       "photo": "images/eg.jpg"
-    },
-    {
-      "name": "Alice",
-      "role": "Undergraduate Student",
-      "field": "Systems and Information Biology",
-      "photo": "images/Alice.JPG"
     }
   ],
   "alumni": [
+     {
+      "name": "Alice(Yangtianyi) Zhang",
+      "role": "Undergraduate Student",
+      "field": "Systems and Information Biology"
+    }，
     {
       "name": "Mehri Hajiaghayi",
       "role": "PhD, 2025",
