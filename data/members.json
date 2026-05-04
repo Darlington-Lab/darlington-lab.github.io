@@ -45,10 +45,10 @@
   ],
   "alumni": [
      {
-      "name": "Alice(Yangtianyi) Zhang",
-      "role": "Undergraduate Student",
+      "name": "Alice (Yangtianyi) Zhang",
+      "role": "Volunteer",
       "field": "Systems and Information Biology"
-    }，
+    },
     {
       "name": "Mehri Hajiaghayi",
       "role": "PhD, 2025",
@@ -58,11 +58,6 @@
       "name": "Example Alumni",
       "role": "MSc, 2022",
       "field": "Kinesiology"
-    },
-    {
-      "name": "Example Alumni",
-      "role": "Undergraduate, 2021",
-      "field": "Biology"
     }
   ]
 }
